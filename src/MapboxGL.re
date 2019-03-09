@@ -3,16 +3,16 @@ type mapboxGlModule;
 module Map = {
   type t;
 
-  [@bs.send] external getZoom: t => int = "getZoom";
-  [@bs.send] external setZoom: (t, int) => t = "setZoom";
+  [@bs.send] external getZoom: t => float = "getZoom";
+  [@bs.send] external setZoom: (t, float) => t = "setZoom";
 };
 
 type map_options = {
   .
   "container": Dom.element,
   "style": string,
-  "center": (int, int),
-  "zoom": int,
+  "center": (float, float),
+  "zoom": float,
 };
 
 [@bs.module] external mapboxGl: mapboxGlModule = "mapbox-gl";

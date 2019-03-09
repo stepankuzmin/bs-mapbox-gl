@@ -4,8 +4,8 @@
   "description": "BuckleScript bindings for Mapbox GL JS",
   "author": "Stepan Kuzmin <to.stepan.kuzmin@gmail.com> (stepankuzmin.com)",
   "license": "MIT",
-  "main": "dist/bundle.js",
   "scripts": {
+    "start": "parcel debug/index.html",
     "build": "bsb -make-world",
     "build:watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
@@ -15,8 +15,13 @@
     "mapbox-gl": "^0.51.0"
   },
   "devDependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-env": "1.7.0",
     "bs-platform": "4.0.18",
-    "mapbox-gl": "0.53.1"
+    "bs-webapi": "0.13.4",
+    "bsb-js": "^1.1.7",
+    "mapbox-gl": "0.53.1",
+    "parcel-bundler": "^1.12.0"
   },
   "keywords": [
     "BuckleScript",

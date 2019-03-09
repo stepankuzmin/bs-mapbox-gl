@@ -1,4 +1,5 @@
 .DS_Store
+.cache
 .merlin
 .bsb.lock
 npm-debug.log
@@ -6,4 +7,5 @@ npm-debug.log
 /dist
 /lib/bs/
 /src/*.bs.js
+/debug/*.bs.js
 /node_modules/

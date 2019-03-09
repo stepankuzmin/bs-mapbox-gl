@@ -19,3 +19,44 @@ Then add `bs-mapbox-gl` to `bs-dependencies` in your `bsconfig.json`:
   "bs-dependencies": ["bs-mapbox-gl"]
 }
 ```
+
+## Usage
+
+You can find more examples
+
+```reason
+// set Mapbox accessToken
+MapboxGL.setAccessToken(MapboxGL.mapboxGl, accessToken);
+
+// get map container
+let container = Option.getExn(getElementById("map", document));
+
+// set map options
+let map_options = {
+  "container": container,
+  "style": "mapbox://styles/mapbox/streets-v9",
+  "center": ((-74.50), 40.),
+  "zoom": 9.,
+};
+
+// create and display map
+let map = MapboxGL.create_map(map_options);
+```
+
+## Contributing
+
+Clone and install dependencies
+
+```shell
+git clone https://github.com/stepankuzmin/bs-mapbox-gl.git
+cd bs-mapbox-gl
+npm install
+```
+
+Start the debug server
+
+```shell
+MAPBOX_ACCESS_TOKEN={YOUR MAPBOX ACCESS TOKEN} npm start
+```
+
+Open the debug page at <http://localhost:1234>
