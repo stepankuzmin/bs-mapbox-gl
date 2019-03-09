@@ -6,8 +6,16 @@
 
 This package is 🚧 WIP 🚧. Feel free to create an issue or PR if you find anything missing.
 
-## Usage
+## Installation
 
 ```sh
 npm install --save mapbox-gl bs-mapbox-gl
+```
+
+Then add `bs-mapbox-gl` to `bs-dependencies` in your `bsconfig.json`:
+
+```json
+{
+  "bs-dependencies": ["bs-mapbox-gl"]
+}
 ```
