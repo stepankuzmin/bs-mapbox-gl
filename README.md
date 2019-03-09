@@ -22,10 +22,12 @@ Then add `bs-mapbox-gl` to `bs-dependencies` in your `bsconfig.json`:
 
 ## Usage
 
-You can find more examples
+To use any of Mapbox’s tools, APIs, or SDKs, you’ll need a Mapbox [access token](https://www.mapbox.com/help/define-access-token/). Mapbox uses access tokens to associate requests to API resources with your account. You can find all your access tokens, create new ones, or delete existing ones on your [API access tokens page](https://www.mapbox.com/studio/account/tokens/).
+
+You can find more examples [here](https://github.com/stepankuzmin/bs-mapbox-gl/tree/master/debug).
 
 ```reason
-// set Mapbox accessToken
+// set the mapbox access token
 MapboxGL.setAccessToken(MapboxGL.mapboxGl, accessToken);
 
 // get map container
