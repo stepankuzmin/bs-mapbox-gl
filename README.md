@@ -5,9 +5,15 @@
 
 [BuckleScript](https://github.com/bloomberg/bucklescript) bindings for [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js).
 
+[Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js) is a JavaScript library that renders interactive maps from vector tiles and Mapbox styles using WebGL.
+
+[<img width="981" alt="Mapbox GL gallery" src="https://raw.githubusercontent.com/mapbox/mapbox-gl-js/master/docs/pages/assets/gallery.png">](https://www.mapbox.com/gallery/)
+
 ## Status
 
-This package is 🚧 WIP 🚧. Feel free to create an issue or PR if you find anything missing.
+This package is 🚧 WIP 🚧.
+
+Feel free to create an issue or PR if you find anything missing.
 
 ## Installation
 
@@ -27,8 +33,6 @@ Then add `bs-mapbox-gl` to `bs-dependencies` in your `bsconfig.json`:
 
 To use any of Mapbox’s tools, APIs, or SDKs, you’ll need a Mapbox [access token](https://www.mapbox.com/help/define-access-token/). Mapbox uses access tokens to associate requests to API resources with your account. You can find all your access tokens, create new ones, or delete existing ones on your [API access tokens page](https://www.mapbox.com/studio/account/tokens/).
 
-You can find more examples [here](https://github.com/stepankuzmin/bs-mapbox-gl/tree/master/debug).
-
 ```reason
 // set the mapbox access token
 MapboxGL.setAccessToken(MapboxGL.mapboxGl, accessToken);
@@ -47,6 +51,8 @@ let map_options = {
 // create and display map
 let map = MapboxGL.create_map(map_options);
 ```
+
+You can find more examples [here](https://github.com/stepankuzmin/bs-mapbox-gl/tree/master/debug).
 
 ## Contributing
 
