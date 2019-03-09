@@ -4,12 +4,17 @@
   "description": "BuckleScript bindings for Mapbox GL JS",
   "author": "Stepan Kuzmin <to.stepan.kuzmin@gmail.com> (stepankuzmin.com)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stepankuzmin/bs-mapbox-gl.git"
+  },
   "scripts": {
     "start": "parcel debug/index.html",
     "build": "bsb -make-world",
     "build:watch": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "mapbox-gl": "^0.51.0"
