@@ -1,5 +1,8 @@
 # bs-mapbox-gl
 
+[![Build Status](https://img.shields.io/circleci/project/github/stepankuzmin/bs-mapbox-gl.svg?style=popout)](https://circleci.com/gh/stepankuzmin/bs-mapbox-gl)
+![npm](https://img.shields.io/npm/v/bs-mapbox-gl.svg)
+
 [BuckleScript](https://github.com/bloomberg/bucklescript) bindings for [Mapbox GL JS](https://github.com/mapbox/mapbox-gl-js).
 
 ## Status
