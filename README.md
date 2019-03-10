@@ -34,8 +34,10 @@ Then add `bs-mapbox-gl` to `bs-dependencies` in your `bsconfig.json`:
 To use any of Mapbox’s tools, APIs, or SDKs, you’ll need a Mapbox [access token](https://www.mapbox.com/help/define-access-token/). Mapbox uses access tokens to associate requests to API resources with your account. You can find all your access tokens, create new ones, or delete existing ones on your [API access tokens page](https://www.mapbox.com/studio/account/tokens/).
 
 ```reason
+open MapboxGL;
+
 // set the mapbox access token
-MapboxGL.setAccessToken(MapboxGL.mapboxGl, accessToken);
+setAccessToken(mapboxGL, accessToken);
 
 // get map container
 let container = Option.getExn(getElementById("map", document));
@@ -44,12 +46,12 @@ let container = Option.getExn(getElementById("map", document));
 let map_options = {
   "container": container,
   "style": "mapbox://styles/mapbox/streets-v9",
-  "center": ((-74.50), 40.),
+  "center": LngLatTuple(-74.50, 40.),
   "zoom": 9.,
 };
 
 // create and display map
-let map = MapboxGL.create_map(map_options);
+let map = MapGL.make(map_options);
 ```
 
 You can find more examples [here](https://github.com/stepankuzmin/bs-mapbox-gl/tree/master/debug).
