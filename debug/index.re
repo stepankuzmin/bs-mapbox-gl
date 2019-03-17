@@ -14,7 +14,7 @@ let container = Option.getExn(getElementById("map", document));
 let map_options = {
   "container": container,
   "style": "mapbox://styles/mapbox/streets-v9",
-  "center": LngLatTuple(-74.50, 40.),
+  "center": LngLat.make(~lng=-74.50, ~lat=40.),
   "zoom": 9.,
 };
 
@@ -28,9 +28,34 @@ let center = MapGL.getCenter(map);
 let lng = LngLat.lng(center);
 let lat = LngLat.lat(center);
 
-// LngLatLike constructors
-let lngLatLikeTuple = LngLatTuple(0., 0.);
-let lngLatLikeClass = LngLatClass(LngLat.make(~lng=0., ~lat=0.));
+// LngLat constructor
+let center = LngLat.make(~lng=-74.50, ~lat=40.);
 
 // MapGL center setter
-MapGL.setCenter(map, lngLatLikeTuple);
+MapGL.setCenter(map, center);
+
+let onLoad = () => {
+  let source = {"type": "vector", "url": "mapbox://mapbox.mapbox-terrain-v2"};
+
+  let layer = {
+    "id": "terrain-data",
+    "type": "line",
+    "source": "contour",
+    "source-layer": "contour",
+    "layout": {
+      "line-join": "round",
+      "line-cap": "round",
+    },
+    "paint": {
+      "line-color": "#ff69b4",
+      "line-width": 1,
+    },
+  };
+
+  MapGL.addSource(map, "contour", source);
+  MapGL.addLayer(map, layer);
+
+  ();
+};
+
+MapGL.on(map, "load", onLoad);

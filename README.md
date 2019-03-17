@@ -46,7 +46,7 @@ let container = Option.getExn(getElementById("map", document));
 let map_options = {
   "container": container,
   "style": "mapbox://styles/mapbox/streets-v9",
-  "center": LngLatTuple(-74.50, 40.),
+  "center": LngLat.make(~lng=-74.50, ~lat=40.),
   "zoom": 9.,
 };
 
